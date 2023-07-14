@@ -1,7 +1,5 @@
 # Priority list | Command Line Application
 
-
-
 I implemented a command-line (CLI) program that lets you manage your tasks.
 
 The specification for this problem is written down as tests.
@@ -9,6 +7,7 @@ The specification for this problem is written down as tests.
 Here's how it is working
 
 [![TASK-CLI](https://res.cloudinary.com/sv-co/image/upload/v1638058186/GDC/SE/Admission/gdc-home-page_b6s3go.png)](https://vimeo.com/648902045)
+
 ## Getting started
 
 1. Install Python: Python is usually installed by default on most modern systems. To check what your currently have, open a terminal and run the following command:
@@ -35,6 +34,7 @@ Here's how it is working
    ```
    ./task.sh
    ```
+
 ## Run Automated Tests
 
 ### 1. Install Node.js
