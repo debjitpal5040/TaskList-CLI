@@ -4,6 +4,7 @@ import sys
 
 
 def help():
+    """help"""
     sa = """Usage :-
 $ ./task add 2 hello world    # Add a new item with priority 2 and text "hello world" to the list
 $ ./task ls                   # Show incomplete priority list items sorted by priority in ascending order
@@ -35,6 +36,7 @@ def add(p, task):
 
 
 def nec():
+    """nec"""
     try:
         f = open("task.txt", "r", encoding="utf-8")
         for line in f:
@@ -115,9 +117,9 @@ def deL(no):
 def report():
     """Prints the number of pending and completed tasks"""
     try:
-        F = open("task.txt", "r", encoding="utf-8")
-        D = F.readlines()
-        up = f"Pending : {len(D)}"
+        f = open("task.txt", "r", encoding="utf-8")
+        d = f.readlines()
+        up = f"Pending : {len(d)}"
         sys.stdout.buffer.write(up.encode("utf8"))
         sys.stdout.buffer.write("\n".encode("utf8"))
         ls()
@@ -156,11 +158,11 @@ if __name__ == "__main__":
         else:
             globals()[args[1]](*args[2:])
     except IndexError:
-        s = """Usage :-
+        S = """Usage :-
 $ ./task add 2 hello world    # Add a new item with priority 2 and text "hello world" to the list
 $ ./task ls                   # Show incomplete priority list items sorted by priority in ascending order
 $ ./task del INDEX            # Delete the incomplete item with the given index
 $ ./task done INDEX           # Mark the incomplete item with the given index as complete
 $ ./task help                 # Show usage
 $ ./task report               # Statistics"""
-        sys.stdout.buffer.write(s.encode("utf8"))
+        sys.stdout.buffer.write(S.encode("utf8"))
